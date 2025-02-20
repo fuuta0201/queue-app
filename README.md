@@ -7,6 +7,10 @@
 - 店舗等に設置する順番待ちを行う UI
 - 管理画面として、店舗側が着席管理や退席管理を行う UI
 
+## 開発環境
+
+- Node.js: v19.5.0
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
