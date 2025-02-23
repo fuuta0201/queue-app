@@ -9,7 +9,7 @@
 
 ## 開発環境
 
-- Node.js: v19.5.0
+- Node.js: v18.18.2
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
