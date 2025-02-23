@@ -5,6 +5,8 @@
 :root {
   --background: #f2efe7;
   --foreground: #171717;
+  --color-blue: #2973b2;
+  --radius: 0.8rem;
 }
 
 body {
@@ -29,4 +31,15 @@ body {
       font-size: calc(10 / 375 * 100vw);
     }
   }
+}
+
+button,
+a {
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.78;
 }

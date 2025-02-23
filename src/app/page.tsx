@@ -1,7 +1,11 @@
+import Top from '@/components/client/Top';
+
 export default function Home() {
   return (
-    <div className="">
-      <main className=""></main>
+    <div>
+      <main>
+        <Top />
+      </main>
     </div>
   );
 }
