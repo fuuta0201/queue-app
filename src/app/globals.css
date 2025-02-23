@@ -16,6 +16,12 @@ body {
 @layer base {
   html {
     font-size: calc(10 / 1280 * 100vw);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
 
   @media (max-width: 768px) {
