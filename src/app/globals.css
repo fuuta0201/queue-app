@@ -3,19 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f2efe7;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Base size */
+@layer base {
+  html {
+    font-size: calc(10 / 1280 * 100vw);
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: calc(10 / 375 * 100vw);
+    }
+  }
 }
