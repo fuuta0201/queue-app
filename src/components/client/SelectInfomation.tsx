@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import Button from '../common/Button';
 
-const SelectInfomation = () => {
+type Props = {
+  setPageState: Dispatch<SetStateAction<number>>;
+};
+
+const SelectInfomation = ({ setPageState }: Props) => {
+  const setInfo = () => {
+    setPageState(2);
+  };
+
+  const backPage = () => {
+    setPageState(0);
+  };
+
+  /*
+  0: カウンター
+  1: テーブル
+  2: どちらでも
+   */
+  const setSeatType = (type: number) => {
+    //@@@ 席タイプの選択処理
+    console.log(type);
+  };
   return (
     <div className="w-[100%] h-[100vh]">
       <div className="w-[100%] h-[13rem] pt-[3rem] pl-[4rem]">
         <Button
           text="戻る"
           isIcon={true}
+          func={() => backPage()}
         />
       </div>
       <div className="w-[88rem] mx-[auto]">
@@ -18,18 +40,21 @@ const SelectInfomation = () => {
             <Button
               text="カウンター"
               isIcon={false}
+              func={() => setSeatType(0)}
             />
           </li>
           <li>
             <Button
               text="テーブル"
               isIcon={false}
+              func={() => setSeatType(1)}
             />
           </li>
           <li>
             <Button
               text="どちらでも"
               isIcon={false}
+              func={() => setSeatType(2)}
             />
           </li>
         </ul>
@@ -58,6 +83,7 @@ const SelectInfomation = () => {
           <Button
             text="確定"
             isIcon={false}
+            func={() => setInfo()}
           />
         </div>
       </div>
